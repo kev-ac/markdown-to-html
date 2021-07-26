@@ -11,6 +11,7 @@ This action prints converts a Markdown input to an HTML
 ### `wrap_html`
 
 Wrap the generated HTML in some basic syntax (doctype, system fonts).
+See [index.js](/blob/master/index.js) for more details.
 
 Default: false
 
@@ -22,6 +23,9 @@ The HTML result
 
 ## Example usage
 
-uses: lifepal/markdown-to-html@v1.1
+```
+uses: kev-ac/markdown-to-html@v1.3.1
 with:
   text: 'Hello there'
+  wrap_html: true
+```
