@@ -7,12 +7,17 @@ const HTML_TEMPLATE = '<!DOCTYPE html><head><style type="text/css">body{font-fam
 
 try {
   const markdownText = core.getInput('text');
+  const wrapHtml = core.getBooleanInput('wrap_html');
   const converter = new showdown.Converter();
   const html = converter.makeHtml(markdownText);
 
-  const finalOutput = util.format(HTML_TEMPLATE, html);
-  
-  core.setOutput("html", finalOutput);
+  if(wrapHtml === true) {
+    const finalOutput = util.format(HTML_TEMPLATE, html);
+    core.setOutput("html", finalOutput);
+  }
+  else {
+    core.setOutput("html", html);
+  }
 
 } catch (error) {
   core.setFailed(error.message);

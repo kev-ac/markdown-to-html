@@ -8,6 +8,9 @@ inputs:
     description: 'Markdown text'
     required: true
     default: ''
+  wrap_html:
+    description: 'Wrap the output in some basic HTML syntax.'
+    default: false
 outputs:
   html:
     description: 'HTML output'
