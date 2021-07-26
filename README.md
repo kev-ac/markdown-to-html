@@ -8,6 +8,12 @@ This action prints converts a Markdown input to an HTML
 
 **Required** The markdown text you want to convert
 
+### `wrap_html`
+
+Wrap the generated HTML in some basic syntax (doctype, system fonts).
+
+Default: false
+
 ## Outputs
 
 ### `html`
